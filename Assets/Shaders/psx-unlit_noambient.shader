@@ -37,8 +37,8 @@ Shader "psx/unlit_noambient" {
 		float4 snapToPixel = UnityObjectToClipPos(v.vertex);
 		float4 vertex = snapToPixel;
 		vertex.xyz = snapToPixel.xyz / snapToPixel.w;
-		vertex.x = floor(160 * vertex.x) / 160;
-		vertex.y = floor(120 * vertex.y) / 120;
+		vertex.x = floor(320 * vertex.x) / 320;
+		vertex.y = floor(240 * vertex.y) / 240;
 		vertex.xyz *= snapToPixel.w;
 		o.pos = vertex;
 
